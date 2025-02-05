@@ -13,13 +13,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Make a change
-      run: echo "Daily commit $(date)" >> commit.log
-
-    - name: Commit changes with email 22f2000409@ds.study.iitm.ac.in
+    - name: Commit step by 22f2000409@ds.study.iitm.ac.in
       run: |
+        echo "Daily commit $(date)" >> commit.log
         git config --global user.name 'GitHub Actions'
         git config --global user.email '22f2000409@ds.study.iitm.ac.in'
         git add .
         git commit -m "Daily commit $(date)"
         git push
+
+       
